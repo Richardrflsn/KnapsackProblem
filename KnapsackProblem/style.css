@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 20px;
+    height: 135vh;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #33415c;
+}
+
+.navbar {
+    color: #000;
+    
+}
+
+#knapsack {
+    margin-top: 5em;
+}
+
+.input-group-text {
+    color: white;
+    background: #023e8a;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#knapsackTable {
+    font-weight: 500;
+    color: #e5e5e5;
+}
+
+.button-1 {
+    padding: 8px 15px;
+    border: none;
+    background: #4070f4;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.button-2 {
+    padding: 8px 15px;
+    border: none;
+    background: #9381ff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.button-1:hover {
+    box-shadow: 0 0 0 2px #fff,
+    0 0 0 4px #4070f4;
+    font-weight: 600;
+}
+
+.button-2:hover {
+    box-shadow: 0 0 0 2px #fff,
+    0 0 0 4px #9381ff;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    font-weight: 500;
+}
+
+@media(max-width: 991px) {
+    .sidebar{
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blurr(10px);
+    }
+}

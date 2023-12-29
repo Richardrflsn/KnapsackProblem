@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Knapsack Problem</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/f291575278.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand fs-4" href="#">Algorithm Design and Analysis</a>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- SideBar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                
+                <!-- Sidebar Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!-- Sidebar Body -->
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="#intro">Intro</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#knapsack">Knapsack</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#explanation">Explanation</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#developer">Developer</a>
+                    </li>
+                </div>
+                </div>
+            </div>
+        </nav>
+
+        <section id="intro">
+
+        </section>
+
+        <section id="knapsack">
+            <div class="container mx-auto">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <input class="form-control shadow-none" id="capacity" type="number" placeholder="Enter Knapsack Capacity">
+                        </div>
+        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            <input class="form-control shadow-none" id="rows" type="number" placeholder="Enter number of Items" />
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="text-center mt-3">
+                    <button type="button" class="generateTable button-1" onclick="createTable();">Membuat Tabel</button>
+                </div>
+        
+        
+                <div class="table mt-3" id="wrapper"></div>
+        
+                <div class="text-center mt-3">
+                    <button type="button" class="generateResult button-2" onclick="generateResult();">Menghitung Knapsack</button>
+                </div>
+        
+            </div>
+        </section>
+    
+    
+        <hr>
+    
+        
+        <div class="container text-center">
+            <h4>hasil dari perhitungan</h4>
+            <div class="result">
+    
+                <div class="resultContainer col-md-4">
+    
+                    <h1>Knapsack</h1>
+                    <h4>Resultant Profit</h4>
+                    <h2 id="kpResultantProfit"></h2>
+                    <h4>Density</h4>
+                    <h2 id="kpProfitWeight"></h2>
+                    <h4>Profit</h4>
+                    <h2 id="kpProfit"></h2>
+                    <h4>Weight</h4>
+                    <h2 id="kpWeight"></h2>
+                    <h4>Resultant Solution</h4>
+                    <h2 id="kpResultantSolution"></h2>
+                </div>
+    
+    
+                <div class="resultContainer col-md-4">
+    
+                    <h1>Knapsack 0-1</h1>
+                    <h4>Resultant Table</h4>
+                    <div id="knapsackTable"></div>
+                    <h4>Resultant Profit</h4>
+                    <h2 id="kp01ResultantProfit"></h2>
+                    <h4>Profit</h4>
+                    <h2 id="kp01Profit"></h2>
+                    <h4>Weight</h4>
+                    <h2 id="kp01Weight"></h2>
+                    <h4>Resultant Solution</h4>
+                    <h2 id="kp01ResultantSolution"></h2>
+                </div>
+    
+            </div>
+    
+        </div>
+
+        <hr>
+
+        <section id="explanation"></section>
+
+        <section id="developer">
+            <div class="container">
+                <h2 class="text-center m-1">Developer</h2>
+                <div class="member d-flex justify-content-center m-4 ">
+                    <div class="row m-0">
+                        <div class="col-md-6">                    
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Richard Rafelson</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">2602096243</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-md-6">                    
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zebedeus Candra</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">2602106250</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-md-6">                    
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Revandi Andres</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">2602096256</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-md-6">                    
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hierro Nathanael</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">2602093960</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
