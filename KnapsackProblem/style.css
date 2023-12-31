@@ -9,8 +9,8 @@
 }
 
 body {
-    margin: 20px;
-    height: 135vh;
+    margin: 50px;
+    height: 320vh;
 }
 
 h1{
@@ -25,10 +25,6 @@ h4 {
 .navbar {
     color: #000;
     
-}
-
-#knapsack {
-    margin-top: 5em;
 }
 
 .input-group-text {
@@ -82,6 +78,15 @@ h4 {
 nav a:hover,
 nav a.active {
     font-weight: 500;
+}
+
+.boxExplanation {
+    position: relative;
+    max-width: 900px;
+    padding: 50px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    height: 650px;
 }
 
 @media(max-width: 991px) {
